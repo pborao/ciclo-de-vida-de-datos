@@ -1,0 +1,118 @@
+1.	Contexto. 
+Hemos decidido hacer la práctica sobre alguna página que proporcionar información sobre actividad sísmica. En un primer momento queríamos hacer web scrapping sobre la página del instituto geográfico nacional de España, dependiente del Ministerio de Transportes, Movilidad y Agenda Urbana.
+Al echar un vistazo a esta web vimos que se proporcionaba información sísmica entre los años 1370 y la actualidad, lo que nos pareció un buen banco de datos.
+A continuación analizamos el archivo robots.txt, cuyo contenido era: 
+User-agent: Googlebot
+Disallow: /?*
+
+User-agent: Baiduspider
+Disallow: /?*
+
+User-agent: YandexBot
+Disallow: /?*
+
+User-agent: ichiro
+Disallow:  /?*
+
+User-agent: sogou spider
+Disallow:  /?*
+
+User-agent: Sosospider
+Disallow: /?*
+
+User-agent: YoudaoBot
+Disallow: /?*
+
+User-agent: YetiBot
+Disallow: /?*
+
+User-agent: bingbot
+Crawl-delay: 2
+Disallow: /?*
+
+User-Agent: Yahoo! Slurp 
+Crawl-delay: 2
+Disallow: /?*
+
+User-agent: rdfbot
+Disallow: /?*
+
+User-agent: Seznambot 
+Request-rate: 1/2s
+Disallow: /?*
+
+User-agent: ia_archiver
+Disallow: 
+
+User-agent: Mediapartners-Google
+Disallow: 
+
+Exclusión de todos los robots: 
+User-agent: *
+Disallow: /
+
+Y al ver que se excluía todos los robots, descartamos el utilizar esta página y seguimos buscando páginas que proporcionaran el tipo de información que queríamos.
+Así, llegamos a la página www.volcanodiscovery.com que tenía información de todo tipo centrada en los terremotos: cuándo habían ocurrido, la magnitud, localización, la fuente de la información, etc. 
+Analizando el archivo robots.txt 
+User-agent: *
+Disallow: /tmp/
+Disallow: /typo3temp/
+#Disallow: /uploads/
+#Disallow: /fileadmin/
+
+User-agent: *
+Crawl-delay: 2
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+#User-Agent: msnbot
+#Disallow: /
+
+#User-Agent: MauiBot
+#Disallow: /
+
+#Baiduspider
+#User-agent: Baiduspider
+#Disallow: /
+
+#Yandex
+#User-agent: Yandex
+#Allow: /
+
+vimos que se restringía el acceso a todos los robots a unos determinados directorios, pero no lo restringía totalmente, así que decidimos realizar la práctica sobre está página. 
+En el archivo también se puede ver cómo el parámetro craw delay (utilizado por los propietarios de las páginas para determinar el tiempo (en segundos) que el robot tiene que esperar entre dos peticiones sucesivas) estaba en 2 segundos. 
+
+2.	Título para el dataset.
+Catálogo de terremotos
+3.	Descripción del dataset.
+4.	Representación gráfica.
+5.	Contenido
+6.	Agradecimientos
+VolcanoDiscovery GmbH
+Dr. Tom Pfeiffer
+
+
+7.	Inspiración
+
+8.	Licencia
+Hay limitaciones en cuanto a la utilización de (determinadas) fotos sin previo permiso. 
+Public Domain Mark: para uso en obas antiguas que están libres de restricciones de derechos de autor o las obras que han sido establecidas de dominio público por el autor antes de la expiración de los derechos. No utilizar mientras existan derechos de autor en algunas jurisdicciones
+CC0: se utiliza para liberar el propio trabajo de las restricciones de derecho de autor en todo el mundo. Se puede utilizar si se reproduce una obra de dominio público y queremos dejar claro que no reclamamos derechos de autor en la copia digital. 
+Coletilla que aparece: Por la presente renuncio a todos los derechos de propiedad intelectual y demás derechos conexos o relacionados así como a cualquier derecho de reclamación y de ejercicio de acciones legales con respecto a esta obra, en la medida que la ley lo permite.
+CC BY-NC-SA 4.0: Reconocimiento no comercial- Compartir Igual 4.0 Internacional: se es libre para:
+-	Compartir: copiar y redistribuir el material en cualquier medio o formato
+-	Adaptar: remezclar, transformar y crear a partir del material
+No se pueden revocar estas libertadas mientras se cumpla con los términos de la licencia. 
+
+CC BY-SA 4.0: Reconocimiento – compartir igual 4.0 Internacional:
+-	Compartir:  copiar y redistribuir el material en cualquier medio o formato
+-	Adaptar: remezclar, transformar y crear a partir del material para cualquier finalidad, incluso comercial
+
+9.	Publicación de Dataset en Zenodo
